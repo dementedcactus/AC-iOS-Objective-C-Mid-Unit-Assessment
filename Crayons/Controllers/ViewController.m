@@ -61,31 +61,13 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath; {
     Crayon *crayon = self.crayons[indexPath.row];
     
     //Initialize the detailViewController and display it
-    DetailedViewController *myDetViewCont = [[DetailedViewController alloc] initWithNibName:@"DetailedViewController" bundle:[NSBundle mainBundle]];
+    //DetailedViewController *myDetViewCont = [[DetailedViewController alloc] initWithNibName:@"DetailedViewController" bundle:[NSBundle mainBundle]];
+    DetailedViewController *myDetViewCont = DetailedViewController.new;
     
     [self.navigationController pushViewController:myDetViewCont animated:YES];
     //[myDetViewCont release];
     myDetViewCont = nil;
 }
-
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    
-//    DetailedViewController* dvc = [[DetailedViewController alloc] init];
-//    //DetailedViewController *dvc = [segue destinationViewController];
-//
-//    [self.navigationController pushViewController:dvc animated:YES];
-    
-//    DetailedViewController *nextViewController=[[DetailedViewController alloc]initWithNibName:@"DetailedViewController" bundle:nil];
-//    UINavigationController *navBar=[[UINavigationController alloc]initWithRootViewController:nextViewController];
-//    [self.navigationController presentModalViewController:navBar animated:YES];
-    
-}
-
-
-
-
-
 
 
 @end
