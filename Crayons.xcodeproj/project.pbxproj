@@ -16,6 +16,7 @@
 		571A1ADB20AB74DA00624059 /* Crayon.m in Sources */ = {isa = PBXBuildFile; fileRef = 571A1ADA20AB74DA00624059 /* Crayon.m */; };
 		57D486A820ADE9560052E870 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57D486A720ADE9560052E870 /* ViewController.m */; };
 		DBDF993220AF3877001649B1 /* Course.m in Sources */ = {isa = PBXBuildFile; fileRef = DBDF993120AF3877001649B1 /* Course.m */; };
+		DBDF993620AF59AD001649B1 /* DetailedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBDF993520AF59AD001649B1 /* DetailedViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,8 @@
 		57D486A720ADE9560052E870 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		DBDF993020AF3877001649B1 /* Course.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Course.h; sourceTree = "<group>"; };
 		DBDF993120AF3877001649B1 /* Course.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Course.m; sourceTree = "<group>"; };
+		DBDF993420AF59AD001649B1 /* DetailedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailedViewController.h; sourceTree = "<group>"; };
+		DBDF993520AF59AD001649B1 /* DetailedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailedViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,8 +90,8 @@
 		571A1AB420AB5DC900624059 /* Crayons */ = {
 			isa = PBXGroup;
 			children = (
+				DBDF993320AF5632001649B1 /* Views */,
 				57D486A920ADEB8A0052E870 /* Models */,
-				57D486AC20ADEBCB0052E870 /* Views */,
 				57D486AA20ADEB990052E870 /* Controllers */,
 				57D486AB20ADEBAE0052E870 /* Supporting Files */,
 				571A1AC320AB5DCA00624059 /* Info.plist */,
@@ -121,6 +124,8 @@
 			children = (
 				57D486A620ADE9560052E870 /* ViewController.h */,
 				57D486A720ADE9560052E870 /* ViewController.m */,
+				DBDF993420AF59AD001649B1 /* DetailedViewController.h */,
+				DBDF993520AF59AD001649B1 /* DetailedViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -138,7 +143,7 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		57D486AC20ADEBCB0052E870 /* Views */ = {
+		DBDF993320AF5632001649B1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -249,6 +254,7 @@
 				571A1AB720AB5DC900624059 /* AppDelegate.m in Sources */,
 				57D486A820ADE9560052E870 /* ViewController.m in Sources */,
 				571A1ADB20AB74DA00624059 /* Crayon.m in Sources */,
+				DBDF993620AF59AD001649B1 /* DetailedViewController.m in Sources */,
 				DBDF993220AF3877001649B1 /* Course.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
