@@ -42,14 +42,17 @@ NSString *cellID = @"cellID";
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID forIndexPath:indexPath];
+    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellID];
     
     Crayon *crayon = self.crayons[indexPath.row];
     cell.textLabel.text = crayon.name;
+    cell.detailTextLabel.text  = crayon.hex;
     
-    //TODO: Figure out background color for cells syntax
-    //cell.backgroundColor = UIColor.redColor;
-    //cell.backgroundColor = crayon.hex;
+    cell.backgroundColor = [UIColor colorWithRed:(crayon.red/255) green:(crayon.green/255) blue:(crayon.blue/255) alpha: 1.0];
+    if ([crayon.hex isEqualToString:@"#000000"]){
+        cell.textLabel.textColor = UIColor.whiteColor;
+        cell.detailTextLabel.textColor = UIColor.whiteColor;
+    }
     
     return cell;
 }

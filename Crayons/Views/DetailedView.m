@@ -8,14 +8,30 @@
 
 #import "DetailedView.h"
 
+#define PADDING 20
+
 @implementation DetailedView
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+// -(instancetype) is more type safe over -(id)
+- (instancetype)initWithFrame:(CGRect)frame {
+    self = [super initWithFrame:frame];
+    if (self) {
+        // do setup code for views
+        [self setupViews];
+    }
+    return self;
 }
-*/
+
+- (void)setupViews {
+    self.backgroundColor = [UIColor orangeColor];
+
+}
+
+
+
+
+
+
+
 
 @end
