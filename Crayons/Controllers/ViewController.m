@@ -7,13 +7,11 @@
 //
 
 #import "ViewController.h"
-#import "DetailedViewController.h"
-#import "Course.h"
 #import "Crayon.h"
+#import "DetailCrayonViewController.h"
 
 @interface ViewController ()
 
-@property (strong, nonatomic) NSArray<Course *> *courses;
 @property (strong, nonatomic) NSMutableArray<Crayon *> *crayons;
 
 @end
@@ -61,15 +59,11 @@ NSString *cellID = @"cellID";
 didSelectRowAtIndexPath:(NSIndexPath *)indexPath; {
     
     //Get the selected color
-    Crayon *crayon = self.crayons[indexPath.row];
+    Crayon *selectedCrayon = [self crayons][indexPath.row];
+    DetailCrayonViewController *detailedCrayon = [[DetailCrayonViewController alloc] initWithCrayon:selectedCrayon];
+    [self.navigationController pushViewController:detailedCrayon animated:true];
     
-    //Initialize the detailViewController and display it
-    //DetailedViewController *myDetViewCont = [[DetailedViewController alloc] initWithNibName:@"DetailedViewController" bundle:[NSBundle mainBundle]];
-    DetailedViewController *myDetViewCont = DetailedViewController.new;
     
-    [self.navigationController pushViewController:myDetViewCont animated:YES];
-    //[myDetViewCont release];
-    myDetViewCont = nil;
 }
 
 
